@@ -175,5 +175,5 @@ class TestNobreak(unittest.TestCase)
         self.nobreak.descarregar(20)
         self.assertEqual(self.nobreak.bateria, 80)
 
-if __name__ == '__main__':
+if __name__ == '__main__'
     unittest.main()
