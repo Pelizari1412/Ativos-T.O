@@ -16,162 +16,162 @@ ativos-TO/
 ├── requirements.txt
 └── README.md
 
-class AMVMovimentacao:
-    def __init__(self):
+class AMVMovimentacao
+    def __init__(self)
         self.status = "Desligado"
 
-    def iniciar(self):
+    def iniciar(self)
         self.status = "Ligado"
         print("AMV Movimentação iniciado")
 
-    def parar(self):
+    def parar(self)
         self.status = "Desligado"
         print("AMV Movimentação parado")
-class Hotbox:
-    def __init__(self):
+class Hotbox
+    def __init__(self)
         self.temperatura = 0
 
-    def aquecer(self, temperatura):
+    def aquecer(self, temperatura)
         self.temperatura = temperatura
         print(f"Hotbox aquecido a {temperatura} graus")
 
-    def desligar(self):
+    def desligar(self)
         self.temperatura = 0
         print("Hotbox desligado")
-class Coldwheel:
-    def __init__(self):
+class Coldwheel
+    def __init__(self)
         self.status = "Desligado"
 
-    def ligar(self):
+    def ligar(self)
         self.status = "Ligado"
         print("Coldwheel ligado")
 
-    def desligar(self):
+    def desligar(self)
         self.status = "Desligado"
         print("Coldwheel desligado")
-class AMVMola:
-    def __init__(self):
+class AMVMola
+    def __init__(self)
         self.tensao = 0
 
-    def ajustar_tensao(self, valor):
+    def ajustar_tensao(self, valor)
         self.tensao = valor
         print(f"AMV Mola ajustado para {valor} unidades de tensão")
-class Gerador:
-    def __init__(self):
+class Gerador
+    def __init__(self)
         self.status = "Desligado"
 
-    def ligar(self):
+    def ligar(self)
         self.status = "Ligado"
         print("Gerador ligado")
 
-    def desligar(self):
+    def desligar(self)
         self.status = "Desligado"
         print("Gerador desligado")
-class Nobreak:
-    def __init__(self):
+class Nobreak
+    def __init__(self)
         self.bateria = 100
 
-    def status_bateria(self):
-        print(f"Status da bateria: {self.bateria}%")
+    def status_bateria(self)
+        print(f"Status da bateria
 
-    def descarregar(self, valor):
+    def descarregar(self, valor)
         self.bateria -= valor
-        if self.bateria < 0:
+        if self.bateria < 0
             self.bateria = 0
         print(f"Bateria descarregada para {self.bateria}%")
 import unittest
 from src.amv_movimentacao import AMVMovimentacao
 
-class TestAMVMovimentacao(unittest.TestCase):
-    def setUp(self):
+class TestAMVMovimentacao(unittest.TestCase)
+    def setUp(self)
         self.amv = AMVMovimentacao()
 
-    def test_iniciar(self):
+    def test_iniciar(self)
         self.amv.iniciar()
         self.assertEqual(self.amv.status, "Ligado")
 
-    def test_parar(self):
+    def test_parar(self)
         self.amv.parar()
         self.assertEqual(self.amv.status, "Desligado")
 
-if __name__ == '__main__':
+if __name__ == '__main__'
     unittest.main()
 import unittest
 from src.hotbox import Hotbox
 
-class TestHotbox(unittest.TestCase):
-    def setUp(self):
+class TestHotbox(unittest.TestCase)
+    def setUp(self)
         self.hotbox = Hotbox()
 
-    def test_aquecer(self):
+    def test_aquecer(self)
         self.hotbox.aquecer(100)
         self.assertEqual(self.hotbox.temperatura, 100)
 
-    def test_desligar(self):
+    def test_desligar(self)
         self.hotbox.desligar()
         self.assertEqual(self.hotbox.temperatura, 0)
 
-if __name__ == '__main__':
+if __name__ == '__main__'
     unittest.main()
 import unittest
 from src.coldwheel import Coldwheel
 
-class TestColdwheel(unittest.TestCase):
-    def setUp(self):
+class TestColdwheel(unittest.TestCase)
+    def setUp(self)
         self.coldwheel = Coldwheel()
 
-    def test_ligar(self):
+    def test_ligar(self)
         self.coldwheel.ligar()
         self.assertEqual(self.coldwheel.status, "Ligado")
 
-    def test_desligar(self):
+    def test_desligar(self)
         self.coldwheel.desligar()
         self.assertEqual(self.coldwheel.status, "Desligado")
 
-if __name__ == '__main__':
+if __name__ == '__main__'
     unittest.main()
 import unittest
 from src.amv_mola import AMVMola
 
-class TestAMVMola(unittest.TestCase):
-    def setUp(self):
+class TestAMVMola(unittest.TestCase)
+    def setUp(self)
         self.amv_mola = AMVMola()
 
-    def test_ajustar_tensao(self):
+    def test_ajustar_tensao(self)
         self.amv_mola.ajustar_tensao(50)
         self.assertEqual(self.amv_mola.tensao, 50)
 
-if __name__ == '__main__':
+if __name__ == '__main__'
     unittest.main()
 import unittest
 from src.gerador import Gerador
 
-class TestGerador(unittest.TestCase):
-    def setUp(self):
+class TestGerador(unittest.TestCase)
+    def setUp(self)
         self.gerador = Gerador()
 
-    def test_ligar(self):
+    def test_ligar(self)
         self.gerador.ligar()
         self.assertEqual(self.gerador.status, "Ligado")
 
-    def test_desligar(self):
+    def test_desligar(self)
         self.gerador.desligar()
         self.assertEqual(self.gerador.status, "Desligado")
 
-if __name__ == '__main__':
+if __name__ == '__main__'
     unittest.main()
 import unittest
 from src.nobreak import Nobreak
 
-class TestNobreak(unittest.TestCase):
-    def setUp(self):
+class TestNobreak(unittest.TestCase)
+    def setUp(self)
         self.nobreak = Nobreak()
 
-    def test_status_bateria(self):
+    def test_status_bateria(self)
         self.nobreak.status_bateria()
-        # Aqui você só verifica o print, mas você pode melhorar o teste
+        
 
-    def test_descarregar(self):
+    def test_descarregar(self)
         self.nobreak.descarregar(20)
         self.assertEqual(self.nobreak.bateria, 80)
 
