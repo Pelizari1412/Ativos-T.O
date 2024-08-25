@@ -1,21 +1,3 @@
-ativos-TO/
-├── src/
-│   ├── amv_movimentacao.py
-│   ├── hotbox.py
-│   ├── coldwheel.py
-│   ├── amv_mola.py
-│   ├── gerador.py
-│   └── nobreak.py
-├── tests/
-│   ├── test_amv_movimentacao.py
-│   ├── test_hotbox.py
-│   ├── test_coldwheel.py
-│   ├── test_amv_mola.py
-│   ├── test_gerador.py
-│   └── test_nobreak.py
-├── requirements.txt
-└── README.md
-
 class AMVMovimentacao
     def __init__(self)
         self.status = "Desligado"
