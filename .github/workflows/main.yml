@@ -15,6 +15,7 @@ ativos-TO/
 │   └── test_nobreak.py
 ├── requirements.txt
 └── README.md
+
 class AMVMovimentacao:
     def __init__(self):
         self.status = "Desligado"
